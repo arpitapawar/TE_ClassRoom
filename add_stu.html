@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+ {% block content %}
+<style>
+
+.add{
+    border-radius: 6px;
+    width:60%;
+    height:210px;
+    background-color: #DD2F6E;
+    margin-left:250px;
+    margin-top:5%;
+    padding:3%;
+    font-family:'monospace';
+    font-size: 30px;
+    word-spacing: 10px;
+    text-decoration:none;
+    color:black;
+}
+
+.user{
+    font-size:50px;
+    margin-left:480px;
+    padding:15px;
+}
+.ass{
+    margin-left:210px;
+}
+
+.test{
+    margin-left:170px;
+}
+.user_h2{
+    font-family: 'monospace';
+    font-size:30px;
+}
+
+.item_1{
+    background-color:tomato;
+    height:100px;
+}
+
+
+</style>
+
+        <div class="add">
+            {% for a in data %}
+        <div class="item_1">Class:{{a[1]}}</div>
+        <div class="item_2">Subject:{{a[2]}}</div>
+            <div class="item_2">Room no:{{a[3]}}</div>
+             {% endfor %}
+ </div>
+   </div>
+   <a href="/fifth"><div class="las la-user-plus user"> <h2 class="user_h2">Students</h2></div> </a>
+    <a href=""><div class="las la-paperclip user ass"> <h2 class="user_h2">Assignments</h2></div> </a>
+    <a href=""><div class="las la-school user test"> <h2 class="user_h2">Tests</h2></div> </a>
+
+{% endblock %}

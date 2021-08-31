@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+ {% block content %}
+<style>
+ .container{
+    top:30%;
+    left:30%;
+    position: absolute;
+    border: 5px outset bisque;
+    height:40%;
+    width:30%;
+    background-color:white;
+    opacity: 1;
+    padding:40px ;
+    padding-top: 50px;
+     margin-left:200px;
+    margin-top: 60px;
+}
+
+input{
+    margin-left: 50px;
+    height: 30px;
+}
+</style>
+ <div class="container">
+        <form method="POST" action="" autocomplete="on">
+            <div class="item">Enter room no of class<input align="middle" type="text" name="room" style="width:200px"/></div>
+            <div class="f_item"><input type="submit"></div>
+          </form>
+    </div>
+{% endblock %}
